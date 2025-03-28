@@ -7,13 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const atelierHTML = `
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
                 <div class="course-item">
-                    <img src="${atelier.image}" class="img-fluid" alt="Image de ${atelier.title}">
+                    <a href="atelier-details.html" onclick="saveAtelier(${atelier.id})">
+                        <img src="${atelier.image}" class="img-fluid" alt="Image de ${atelier.title}">
+                    </a>
                     <div class="course-content">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h4>${atelier.title}</h4>
                             <p class="price">${atelier.duration}</p>
                         </div>
-                        <h3><a href="atelier-details.html" onclick="saveAtelier(${atelier.id})">${atelier.title}</a></h3>
+                        
                         <p>${atelier.description}</p>
                         <div class="trainer d-flex justify-content-between align-items-center">
                             <div class="trainer-profile d-flex align-items-center">
